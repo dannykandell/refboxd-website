@@ -1155,5 +1155,152 @@ footer {
   .copyright {
     text-align: center;
   }
+  /* =========================================
+   REAL REFBOX'D APP SCREENSHOTS
+   ========================================= */
+
+.phone-showcase {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 620px;
+  margin-left: auto;
+}
+
+.phone {
+  position: absolute;
+  filter: drop-shadow(0 32px 45px rgba(0, 0, 0, 0.65));
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.phone-frame {
+  overflow: hidden;
+
+  background: #050607;
+
+  border: 6px solid #1b2025;
+  border-radius: 42px;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.13),
+    0 40px 90px rgba(0, 0, 0, 0.6);
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* CENTER PHONE — PROFILE */
+
+.phone-center {
+  width: 265px;
+
+  left: 50%;
+  top: 5px;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+
+/* LEFT PHONE — FEED */
+
+.phone-left {
+  width: 225px;
+
+  left: 0;
+  top: 105px;
+
+  transform: rotate(-7deg);
+
+  z-index: 1;
+
+  opacity: 0.88;
+}
+
+
+/* RIGHT PHONE — GAME */
+
+.phone-right {
+  width: 225px;
+
+  right: 0;
+  top: 105px;
+
+  transform: rotate(7deg);
+
+  z-index: 2;
+
+  opacity: 0.9;
+}
+
+
+/* SUBTLE DESKTOP HOVER */
+
+.phone-showcase:hover .phone-center {
+  transform:
+    translateX(-50%)
+    translateY(-8px);
+}
+
+.phone-showcase:hover .phone-left {
+  transform:
+    rotate(-9deg)
+    translateX(-6px);
+}
+
+.phone-showcase:hover .phone-right {
+  transform:
+    rotate(9deg)
+    translateX(6px);
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .phone-showcase {
+    margin: 0 auto;
+  }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .phone-showcase {
+    max-width: 360px;
+    height: 480px;
+  }
+
+  .phone-center {
+    width: 205px;
+    top: 0;
+  }
+
+  .phone-left {
+    width: 168px;
+    left: -2px;
+    top: 90px;
+  }
+
+  .phone-right {
+    width: 168px;
+    right: -2px;
+    top: 90px;
+  }
+
+  .phone-frame {
+    border-width: 4px;
+    border-radius: 30px;
+  }
+}
 
 }
