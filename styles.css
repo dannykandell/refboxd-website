@@ -18,7 +18,9 @@
 }
 
 
-/* RESET */
+/* =========================================
+   RESET
+   ========================================= */
 
 * {
   box-sizing: border-box;
@@ -30,14 +32,17 @@ html {
 
 body {
   margin: 0;
+
   background: var(--bg);
   color: var(--white);
+
   font-family:
     Inter,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+
   line-height: 1.5;
 }
 
@@ -56,7 +61,9 @@ img {
 }
 
 
-/* NAV */
+/* =========================================
+   NAV
+   ========================================= */
 
 .nav {
   position: sticky;
@@ -89,6 +96,7 @@ img {
 .brand-logo {
   width: 42px;
   height: 42px;
+
   object-fit: contain;
 }
 
@@ -97,6 +105,7 @@ img {
   gap: 34px;
 
   color: var(--silver);
+
   font-size: 14px;
   font-weight: 600;
 }
@@ -110,10 +119,10 @@ img {
 }
 
 .nav-download {
+  padding: 11px 18px;
+
   background: var(--blue);
   color: #071015;
-
-  padding: 11px 18px;
 
   border-radius: 9px;
 
@@ -127,20 +136,24 @@ img {
 
 .nav-download:hover {
   background: var(--blue-bright);
+
   transform: translateY(-1px);
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+   ========================================= */
 
 .hero {
-  min-height: 760px;
-
   position: relative;
-  overflow: hidden;
+
+  min-height: 760px;
 
   display: flex;
   align-items: center;
+
+  overflow: hidden;
 
   border-bottom: 1px solid var(--border);
 }
@@ -154,20 +167,21 @@ img {
   right: -220px;
   top: 40px;
 
-  background: radial-gradient(
-    circle,
-    rgba(159, 217, 238, 0.13),
-    transparent 67%
-  );
+  background:
+    radial-gradient(
+      circle,
+      rgba(159, 217, 238, 0.13),
+      transparent 67%
+    );
 
   pointer-events: none;
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 0.95fr;
 
-  gap: 90px;
+  gap: 60px;
   align-items: center;
 
   padding-top: 85px;
@@ -195,20 +209,21 @@ img {
   height: 7px;
 
   background: var(--blue);
+
   border-radius: 50%;
 
   box-shadow: 0 0 16px var(--blue);
 }
 
 .hero h1 {
+  max-width: 780px;
+
   margin: 20px 0 24px;
 
   font-size: clamp(58px, 6vw, 88px);
   line-height: 0.96;
 
   letter-spacing: -0.055em;
-
-  max-width: 780px;
 }
 
 .hero h1 span {
@@ -216,14 +231,14 @@ img {
 }
 
 .hero-description {
-  color: var(--silver);
-
   max-width: 590px;
+
+  margin-bottom: 34px;
+
+  color: var(--silver);
 
   font-size: 19px;
   line-height: 1.7;
-
-  margin-bottom: 34px;
 }
 
 .hero-actions {
@@ -231,13 +246,18 @@ img {
   align-items: center;
 
   gap: 18px;
+
   flex-wrap: wrap;
 }
 
 
-/* APP STORE BUTTON */
+/* =========================================
+   APP STORE BUTTON
+   ========================================= */
 
 .app-store-button {
+  min-width: 178px;
+
   display: inline-flex;
   align-items: center;
 
@@ -250,8 +270,6 @@ img {
 
   border-radius: 11px;
 
-  min-width: 178px;
-
   transition: transform 0.2s ease;
 }
 
@@ -261,203 +279,168 @@ img {
 
 .app-store-button small {
   display: block;
+
   font-size: 10px;
   line-height: 1;
 }
 
 .app-store-button strong {
   display: block;
+
   font-size: 20px;
   line-height: 1.15;
 }
 
 .apple-logo {
-  font-size: 27px;
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  color: #050607;
 }
 
 .secondary-button {
   color: var(--silver);
-  font-weight: 700;
+
   font-size: 14px;
+  font-weight: 700;
 }
 
 
-/* HERO MOCKUP */
+/* =========================================
+   REAL REFBOX'D SCREENSHOTS
+   ========================================= */
 
 .hero-preview {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
 }
 
-.preview-card {
+.phone-showcase {
+  position: relative;
+
   width: 100%;
-  max-width: 430px;
+  max-width: 560px;
+  height: 560px;
 
   margin-left: auto;
+}
 
-  padding: 28px;
+.phone {
+  position: absolute;
 
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,0.055),
-      rgba(255,255,255,0.015)
+  filter:
+    drop-shadow(
+      0 32px 45px rgba(0, 0, 0, 0.65)
     );
 
-  border: 1px solid rgba(159, 217, 238, 0.22);
-  border-radius: 28px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.phone-frame {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #050607;
+
+  border: 6px solid #1b2025;
+  border-radius: 38px;
 
   box-shadow:
-    0 40px 90px rgba(0, 0, 0, 0.55),
-    0 0 70px rgba(159, 217, 238, 0.05);
-
-  transform: rotate(2deg);
+    0 0 0 1px rgba(255, 255, 255, 0.12),
+    0 30px 70px rgba(0, 0, 0, 0.65);
 }
 
-.preview-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding-bottom: 25px;
-
-  border-bottom: 1px solid var(--border);
-}
-
-.preview-label {
-  color: var(--blue);
-
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.17em;
-}
-
-.preview-name {
-  margin-top: 4px;
-
-  color: var(--silver);
-  font-size: 14px;
-}
-
-.preview-logo {
-  width: 54px;
-}
-
-.preview-stat-main {
-  padding: 34px 0 27px;
-}
-
-.preview-number {
+.phone-frame img {
   display: block;
 
-  font-size: 76px;
-  line-height: 0.9;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 
-  font-weight: 900;
-  letter-spacing: -0.06em;
-}
-
-.preview-stat-label {
-  display: block;
-
-  color: var(--blue);
-
-  margin-top: 10px;
-
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-}
-
-.preview-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-
-  padding: 19px 0;
-}
-
-.preview-stats div {
-  display: flex;
-  flex-direction: column;
-}
-
-.preview-stats strong {
-  font-size: 22px;
-}
-
-.preview-stats span {
-  color: var(--muted);
-  font-size: 11px;
-}
-
-.recent-title {
-  margin: 25px 0 10px;
-
-  color: var(--muted);
-
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 0.15em;
-}
-
-.game-card {
-  background: #07090a;
-
-  border: 1px solid var(--border);
-  border-radius: 14px;
-
-  padding: 16px;
-}
-
-.game-meta {
-  display: flex;
-  justify-content: space-between;
-
-  margin-bottom: 15px;
-
-  color: var(--muted);
-
-  font-size: 10px;
-  font-weight: 800;
-}
-
-.sport-tag {
-  color: var(--blue);
-}
-
-.team-row {
-  display: flex;
-  justify-content: space-between;
-
-  color: var(--silver);
-
-  padding: 5px 0;
-}
-
-.team-row strong {
-  color: var(--white);
-}
-
-.team-row.winner {
-  color: var(--white);
-  font-weight: 700;
-}
-
-.game-footer {
-  margin-top: 13px;
-  padding-top: 12px;
-
-  border-top: 1px solid var(--border);
-
-  color: var(--muted);
-
-  font-size: 10px;
+  object-fit: cover;
 }
 
 
-/* FEATURE STRIP */
+/* CENTER PHONE — PROFILE */
+
+.phone-center {
+  width: 235px;
+
+  left: 50%;
+  top: 10px;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+}
+
+
+/* LEFT PHONE — FEED */
+
+.phone-left {
+  width: 195px;
+
+  left: 15px;
+  top: 95px;
+
+  transform: rotate(-7deg);
+
+  z-index: 1;
+
+  opacity: 0.9;
+}
+
+
+/* RIGHT PHONE — GAME */
+
+.phone-right {
+  width: 195px;
+
+  right: 15px;
+  top: 95px;
+
+  transform: rotate(7deg);
+
+  z-index: 2;
+
+  opacity: 0.92;
+}
+
+
+/* SCREENSHOT HOVER */
+
+.phone-showcase:hover .phone-center {
+  transform:
+    translateX(-50%)
+    translateY(-8px);
+}
+
+.phone-showcase:hover .phone-left {
+  transform:
+    rotate(-9deg)
+    translateX(-6px);
+}
+
+.phone-showcase:hover .phone-right {
+  transform:
+    rotate(9deg)
+    translateX(6px);
+}
+
+
+/* =========================================
+   FEATURE STRIP
+   ========================================= */
 
 .feature-strip {
   background: #080a0c;
@@ -472,6 +455,7 @@ img {
 
 .strip-item {
   display: flex;
+
   gap: 18px;
 
   padding: 30px;
@@ -485,24 +469,28 @@ img {
 
 .strip-number {
   color: var(--blue);
+
   font-weight: 900;
 }
 
 .strip-item strong {
   font-size: 13px;
+
   letter-spacing: 0.06em;
 }
 
 .strip-item p {
+  margin: 5px 0 0;
+
   color: var(--muted);
 
   font-size: 13px;
-
-  margin: 5px 0 0;
 }
 
 
-/* GENERAL SECTIONS */
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
 
 .section {
   padding: 125px 0;
@@ -515,6 +503,7 @@ img {
   grid-template-columns: 1fr 1fr;
 
   gap: 100px;
+
   align-items: center;
 }
 
@@ -531,12 +520,12 @@ img {
 
 .section-copy p,
 .center-heading p {
+  max-width: 570px;
+
   color: var(--silver);
 
   font-size: 17px;
   line-height: 1.75;
-
-  max-width: 570px;
 }
 
 .center-heading {
@@ -553,7 +542,9 @@ img {
 }
 
 
-/* HISTORY */
+/* =========================================
+   HISTORY
+   ========================================= */
 
 .history-section {
   background: var(--bg);
@@ -602,13 +593,14 @@ img {
 
   border-radius: 50%;
 
-  box-shadow: 0 0 15px rgba(159, 217, 238, 0.6);
+  box-shadow:
+    0 0 15px rgba(159, 217, 238, 0.6);
 }
 
 .history-year {
-  color: var(--blue);
-
   margin-bottom: 7px;
+
+  color: var(--blue);
 
   font-size: 11px;
   font-weight: 900;
@@ -652,7 +644,9 @@ img {
 }
 
 
-/* STATS */
+/* =========================================
+   STATS
+   ========================================= */
 
 .stats-section {
   background: var(--bg-soft);
@@ -660,7 +654,6 @@ img {
 
 .stats-grid {
   display: grid;
-
   grid-template-columns: repeat(4, 1fr);
 
   gap: 15px;
@@ -682,14 +675,15 @@ img {
 }
 
 .stat-card-featured {
-  border-color: rgba(159, 217, 238, 0.4);
-
   background:
     linear-gradient(
       145deg,
-      rgba(159,217,238,0.09),
+      rgba(159, 217, 238, 0.09),
       var(--card)
     );
+
+  border-color:
+    rgba(159, 217, 238, 0.4);
 }
 
 .stat-card span {
@@ -735,7 +729,9 @@ img {
 }
 
 
-/* COMMUNITY */
+/* =========================================
+   COMMUNITY
+   ========================================= */
 
 .community-visual {
   display: flex;
@@ -746,12 +742,12 @@ img {
   width: 100%;
   max-width: 470px;
 
+  overflow: hidden;
+
   background: var(--card);
 
   border: 1px solid var(--border);
   border-radius: 20px;
-
-  overflow: hidden;
 }
 
 .crew-header {
@@ -779,6 +775,7 @@ img {
   grid-template-columns: auto 1fr auto;
 
   gap: 14px;
+
   align-items: center;
 
   padding: 18px 20px;
@@ -800,7 +797,9 @@ img {
 
   background: #171c20;
 
-  border: 1px solid rgba(159, 217, 238, 0.25);
+  border:
+    1px solid rgba(159, 217, 238, 0.25);
+
   border-radius: 50%;
 
   color: var(--blue);
@@ -816,6 +815,7 @@ img {
 
 .official-row span {
   color: var(--muted);
+
   font-size: 12px;
 }
 
@@ -851,11 +851,14 @@ img {
 
 .community-features span {
   color: var(--muted);
+
   font-size: 14px;
 }
 
 
-/* BUILT FOR OFFICIALS */
+/* =========================================
+   BUILT FOR OFFICIALS
+   ========================================= */
 
 .built-section {
   background: var(--bg-soft);
@@ -884,7 +887,8 @@ img {
 .built-card:hover {
   transform: translateY(-4px);
 
-  border-color: rgba(159, 217, 238, 0.3);
+  border-color:
+    rgba(159, 217, 238, 0.3);
 }
 
 .built-icon {
@@ -901,19 +905,22 @@ img {
 }
 
 .built-card p {
-  color: var(--muted);
-
   margin: 0;
+
+  color: var(--muted);
 
   font-size: 14px;
   line-height: 1.65;
 }
 
 
-/* DOWNLOAD */
+/* =========================================
+   DOWNLOAD
+   ========================================= */
 
 .download-section {
   position: relative;
+
   overflow: hidden;
 
   padding: 140px 0;
@@ -932,11 +939,12 @@ img {
 
   transform: translate(-50%, -50%);
 
-  background: radial-gradient(
-    circle,
-    rgba(159, 217, 238, 0.12),
-    transparent 68%
-  );
+  background:
+    radial-gradient(
+      circle,
+      rgba(159, 217, 238, 0.12),
+      transparent 68%
+    );
 
   pointer-events: none;
 }
@@ -956,9 +964,9 @@ img {
 }
 
 .download-content p {
-  color: var(--silver);
-
   margin-bottom: 30px;
+
+  color: var(--silver);
 
   font-size: 17px;
 }
@@ -968,14 +976,16 @@ img {
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+   ========================================= */
 
 footer {
-  border-top: 1px solid var(--border);
-
   padding: 30px 0;
 
   background: #030405;
+
+  border-top: 1px solid var(--border);
 }
 
 .footer-inner {
@@ -992,6 +1002,7 @@ footer {
   gap: 10px;
 
   font-size: 12px;
+
   letter-spacing: 0.08em;
 }
 
@@ -1001,6 +1012,7 @@ footer {
 
 .footer-links {
   display: flex;
+
   gap: 24px;
 
   color: var(--muted);
@@ -1017,7 +1029,9 @@ footer {
 }
 
 
-/* RESPONSIVE */
+/* =========================================
+   TABLET
+   ========================================= */
 
 @media (max-width: 900px) {
 
@@ -1032,16 +1046,14 @@ footer {
   .hero-grid {
     grid-template-columns: 1fr;
 
-    gap: 60px;
+    gap: 55px;
 
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
 
-  .preview-card {
-    margin: auto;
-
-    transform: none;
+  .phone-showcase {
+    margin: 0 auto;
   }
 
   .feature-strip-grid {
@@ -1071,10 +1083,18 @@ footer {
 }
 
 
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media (max-width: 600px) {
 
   .container {
-    width: min(calc(100% - 28px), var(--max-width));
+    width:
+      min(
+        calc(100% - 28px),
+        var(--max-width)
+      );
   }
 
   .nav-inner {
@@ -1092,11 +1112,13 @@ footer {
 
   .nav-download {
     padding: 9px 13px;
+
     font-size: 12px;
   }
 
   .hero-grid {
     padding-top: 65px;
+    padding-bottom: 45px;
   }
 
   .hero h1 {
@@ -1108,18 +1130,48 @@ footer {
   }
 
   .hero-actions {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
   }
 
-  .preview-card {
-    padding: 20px;
-    border-radius: 20px;
+
+  /* REAL SCREENSHOTS ON MOBILE */
+
+  .phone-showcase {
+    max-width: 340px;
+    height: 430px;
+
+    margin: 0 auto;
   }
 
-  .preview-number {
-    font-size: 62px;
+  .phone-center {
+    width: 185px;
+
+    top: 0;
   }
+
+  .phone-left {
+    width: 150px;
+
+    left: 0;
+    top: 80px;
+  }
+
+  .phone-right {
+    width: 150px;
+
+    right: 0;
+    top: 80px;
+  }
+
+  .phone-frame {
+    border-width: 4px;
+
+    border-radius: 28px;
+  }
+
+
+  /* OTHER SECTIONS */
 
   .section {
     padding: 90px 0;
@@ -1155,152 +1207,5 @@ footer {
   .copyright {
     text-align: center;
   }
-  /* =========================================
-   REAL REFBOX'D APP SCREENSHOTS
-   ========================================= */
-
-.phone-showcase {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 620px;
-  margin-left: auto;
-}
-
-.phone {
-  position: absolute;
-  filter: drop-shadow(0 32px 45px rgba(0, 0, 0, 0.65));
-
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
-
-.phone-frame {
-  overflow: hidden;
-
-  background: #050607;
-
-  border: 6px solid #1b2025;
-  border-radius: 42px;
-
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.13),
-    0 40px 90px rgba(0, 0, 0, 0.6);
-}
-
-.phone-frame img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-/* CENTER PHONE — PROFILE */
-
-.phone-center {
-  width: 265px;
-
-  left: 50%;
-  top: 5px;
-
-  transform: translateX(-50%);
-
-  z-index: 3;
-}
-
-
-/* LEFT PHONE — FEED */
-
-.phone-left {
-  width: 225px;
-
-  left: 0;
-  top: 105px;
-
-  transform: rotate(-7deg);
-
-  z-index: 1;
-
-  opacity: 0.88;
-}
-
-
-/* RIGHT PHONE — GAME */
-
-.phone-right {
-  width: 225px;
-
-  right: 0;
-  top: 105px;
-
-  transform: rotate(7deg);
-
-  z-index: 2;
-
-  opacity: 0.9;
-}
-
-
-/* SUBTLE DESKTOP HOVER */
-
-.phone-showcase:hover .phone-center {
-  transform:
-    translateX(-50%)
-    translateY(-8px);
-}
-
-.phone-showcase:hover .phone-left {
-  transform:
-    rotate(-9deg)
-    translateX(-6px);
-}
-
-.phone-showcase:hover .phone-right {
-  transform:
-    rotate(9deg)
-    translateX(6px);
-}
-
-
-/* TABLET */
-
-@media (max-width: 900px) {
-  .phone-showcase {
-    margin: 0 auto;
-  }
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-  .phone-showcase {
-    max-width: 360px;
-    height: 480px;
-  }
-
-  .phone-center {
-    width: 205px;
-    top: 0;
-  }
-
-  .phone-left {
-    width: 168px;
-    left: -2px;
-    top: 90px;
-  }
-
-  .phone-right {
-    width: 168px;
-    right: -2px;
-    top: 90px;
-  }
-
-  .phone-frame {
-    border-width: 4px;
-    border-radius: 30px;
-  }
-}
 
 }
