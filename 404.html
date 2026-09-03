@@ -2,21 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-
-<link
-  rel="icon"
-  type="image/png"
-  href="/assets/logo.png"
-/>
-
-<link
-  rel="apple-touch-icon"
-  href="/assets/logo.png"
-/>
 
   <title>Open in RefBox'd</title>
 
@@ -24,28 +14,71 @@
     name="description"
     content="Open this profile or game in RefBox'd."
   />
-<meta property="og:site_name" content="RefBox'd" />
-<meta property="og:title" content="RefBox'd Profile" />
-<meta
-  property="og:description"
-  content="View this official's profile on RefBox'd."
-/>
-<meta
-  property="og:image"
-  content="https://refboxd.me/assets/logo.png"
-/>
-<meta property="og:type" content="website" />
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="RefBox'd Profile" />
-<meta
-  name="twitter:description"
-  content="View this official's profile on RefBox'd."
-/>
-<meta
-  name="twitter:image"
-  content="https://refboxd.me/assets/logo.png"
-/>
+  <!-- Website icon -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="https://refboxd.me/assets/logo.png"
+  />
+
+  <link
+    rel="apple-touch-icon"
+    href="https://refboxd.me/assets/logo.png"
+  />
+
+  <!-- Link preview / Open Graph -->
+  <meta
+    property="og:site_name"
+    content="RefBox'd"
+  />
+
+  <meta
+    property="og:title"
+    content="RefBox'd Profile"
+  />
+
+  <meta
+    property="og:description"
+    content="View this official's profile on RefBox'd."
+  />
+
+  <meta
+    property="og:image"
+    content="https://refboxd.me/assets/logo.png"
+  />
+
+  <meta
+    property="og:url"
+    content="https://refboxd.me/"
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <!-- Twitter / X preview -->
+  <meta
+    name="twitter:card"
+    content="summary"
+  />
+
+  <meta
+    name="twitter:title"
+    content="RefBox'd Profile"
+  />
+
+  <meta
+    name="twitter:description"
+    content="View this official's profile on RefBox'd."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://refboxd.me/assets/logo.png"
+  />
+
   <style>
     * {
       box-sizing: border-box;
@@ -57,6 +90,7 @@
       min-height: 100vh;
       background: #0b0d10;
       color: #ffffff;
+
       font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -87,10 +121,22 @@
         0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
+    .logo {
+      width: 92px;
+      height: 92px;
+
+      object-fit: contain;
+
+      margin: 0 auto 20px;
+
+      border-radius: 20px;
+    }
+
     .brand {
       font-size: 30px;
       font-weight: 800;
       letter-spacing: -1px;
+
       margin-bottom: 28px;
     }
 
@@ -101,13 +147,16 @@
     h1 {
       font-size: 24px;
       line-height: 1.2;
+
       margin-bottom: 10px;
     }
 
     .description {
       color: #a9b0ba;
+
       font-size: 15px;
       line-height: 1.5;
+
       margin-bottom: 28px;
     }
 
@@ -137,8 +186,10 @@
 
     .small {
       color: #737b87;
+
       font-size: 12px;
       line-height: 1.5;
+
       margin-top: 20px;
     }
   </style>
@@ -146,6 +197,14 @@
 
 <body>
   <main class="card">
+
+    <!-- RefBox'd logo -->
+    <img
+      class="logo"
+      src="https://refboxd.me/assets/logo.png"
+      alt="RefBox'd"
+    />
+
     <div class="brand">
       RefBox<span>'d</span>
     </div>
@@ -180,6 +239,7 @@
       Track the games you work, explore your officiating
       stats, and connect with other officials.
     </p>
+
   </main>
 
   <script>
