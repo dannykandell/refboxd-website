@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>Open in RefBox'd</title>
+
+  <meta
+    name="description"
+    content="Open this profile or game in RefBox'd."
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0b0d10;
+      color: #ffffff;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 460px;
+
+      background: #15181d;
+
+      border: 1px solid #272c34;
+      border-radius: 24px;
+
+      padding: 32px 24px;
+
+      text-align: center;
+
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .brand {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 28px;
+    }
+
+    .brand span {
+      color: #2e7fe8;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #a9b0ba;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+
+      padding: 15px 20px;
+
+      background: #2e7fe8;
+      color: #ffffff;
+
+      border-radius: 14px;
+
+      font-size: 16px;
+      font-weight: 700;
+
+      text-decoration: none;
+
+      margin-bottom: 12px;
+    }
+
+    .secondary {
+      background: #20242a;
+      border: 1px solid #303640;
+    }
+
+    .small {
+      color: #737b87;
+      font-size: 12px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <div class="brand">
+      RefBox<span>'d</span>
+    </div>
+
+    <h1 id="title">
+      Open in RefBox'd
+    </h1>
+
+    <p
+      class="description"
+      id="description"
+    >
+      View this on RefBox'd.
+    </p>
+
+    <a
+      class="button"
+      id="openApp"
+      href="#"
+    >
+      Open RefBox'd
+    </a>
+
+    <a
+      class="button secondary"
+      href="https://apps.apple.com/us/app/refboxd/id6796103132"
+    >
+      Get RefBox'd on the App Store
+    </a>
+
+    <p class="small">
+      Track the games you work, explore your officiating
+      stats, and connect with other officials.
+    </p>
+  </main>
+
+  <script>
+    const path = window.location.pathname;
+
+    const title =
+      document.getElementById("title");
+
+    const description =
+      document.getElementById("description");
+
+    const openApp =
+      document.getElementById("openApp");
+
+    let appPath = "";
+
+    /*
+     * PROFILE LINKS
+     *
+     * Website:
+     * /u/username
+     *
+     * App:
+     * refboxd://u/username
+     */
+    if (path.startsWith("/u/")) {
+      const username =
+        path.substring(3);
+
+      title.textContent =
+        "RefBox'd Profile";
+
+      description.textContent =
+        username
+          ? `View @${decodeURIComponent(username)} on RefBox'd.`
+          : "View this official on RefBox'd.";
+
+      appPath =
+        `u/${username}`;
+    }
+
+    /*
+     * GAME LINKS
+     *
+     * Website:
+     * /game/game-id
+     *
+     * App:
+     * refboxd://game/game-id
+     */
+    else if (path.startsWith("/game/")) {
+      const gameId =
+        path.substring(6);
+
+      title.textContent =
+        "RefBox'd Game";
+
+      description.textContent =
+        "View this game on RefBox'd.";
+
+      appPath =
+        `game/${gameId}`;
+    }
+
+    /*
+     * UNKNOWN PAGE
+     */
+    else {
+      title.textContent =
+        "Find it on RefBox'd";
+
+      description.textContent =
+        "Open RefBox'd to keep exploring.";
+
+      appPath = "";
+    }
+
+    openApp.href =
+      appPath
+        ? `refboxd://${appPath}`
+        : "refboxd://";
+  </script>
+</body>
+</html>
