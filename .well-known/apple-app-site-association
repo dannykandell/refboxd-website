@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "MYS39AB23F.com.refboxd.app"
+        ],
+        "components": [
+          {
+            "/": "/u/*"
+          },
+          {
+            "/": "/game/*"
+          }
+        ]
+      }
+    ]
+  }
+}

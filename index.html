@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-
 <body>
 
   <!-- =====================================
@@ -34,25 +33,25 @@
 
         <img
           src="assets/logo.png"
-          alt="RefBox'd"
+          alt="RefBox'd logo"
           class="brand-logo"
         />
 
-        <span>REFBOX'D</span>
+        <img
+          src="assets/refboxd-wordmark.png"
+          alt="RefBox'd"
+          class="brand-wordmark"
+        />
 
       </a>
-
 
       <nav class="nav-links">
 
         <a href="#features">Features</a>
-
         <a href="#stats">Stats</a>
-
         <a href="#community">Community</a>
 
       </nav>
-
 
       <a href="#download" class="nav-download">
         Get RefBox'd
@@ -61,7 +60,6 @@
     </div>
 
   </header>
-
 
 
   <main>
@@ -74,7 +72,6 @@
     <section class="hero">
 
       <div class="hero-glow"></div>
-
 
       <div class="container hero-grid">
 
@@ -91,15 +88,10 @@
 
           </div>
 
-
           <h1>
-
             Your officiating<br />
-
             career. <span>Box'd.</span>
-
           </h1>
-
 
           <p class="hero-description">
 
@@ -109,75 +101,67 @@
 
           </p>
 
-
           <div class="hero-actions">
 
-
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/refboxd/id6796103132"
               class="app-store-button"
               id="app-store-link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
 
-              <div class="apple-logo">●</div>
-
+              <svg
+                class="apple-logo"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill="currentColor"
+                  d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.31.03-1.73-.78-3.23-.78-1.5 0-1.97.76-3.21.81-1.29.05-2.27-1.32-3.1-2.55C4.42 17 3.12 12.57 4.87 9.53a4.82 4.82 0 0 1 4.09-2.47c1.28-.03 2.48.86 3.23.86.72 0 2.13-1.07 3.59-.91.61.03 2.32.24 3.42 1.86a4.6 4.6 0 0 0-2.03 3.84 4.48 4.48 0 0 0 2.52 4.09c-.29.84-.66 1.66-.98 2.7ZM13.06 4.41A4.41 4.41 0 0 1 15.88 2a4.31 4.31 0 0 1-1 3.13 3.65 3.65 0 0 1-2.86 1.35 4.17 4.17 0 0 1 1.04-3.07Z"
+                />
+              </svg>
 
               <div>
-
                 <small>Download on the</small>
-
                 <strong>App Store</strong>
-
               </div>
 
             </a>
-
 
             <a
               href="#features"
               class="secondary-button"
             >
-
               See what RefBox'd does ↓
-
             </a>
-
 
           </div>
 
         </div>
 
 
-
         <!-- =====================================
-             REAL REFBOX'D APP SCREENSHOTS
+             ROTATING APP SCREENSHOTS
              ===================================== -->
 
         <div class="hero-preview">
 
-          <div class="phone-showcase">
+          <div
+            class="phone-showcase"
+            id="phone-showcase"
+          >
 
 
-            <!-- LEFT: FEED -->
+            <!-- PROFILE -->
 
-            <div class="phone phone-left">
-
-              <div class="phone-frame">
-
-                <img
-                  src="assets/screenshots/feed.png"
-                  alt="RefBox'd activity feed"
-                />
-
-              </div>
-
-            </div>
-
-
-
-            <!-- CENTER: PROFILE -->
-
-            <div class="phone phone-center">
+            <div
+              class="phone phone-left"
+              data-phone="profile"
+              role="button"
+              tabindex="0"
+              aria-label="Show RefBox'd profile screenshot"
+            >
 
               <div class="phone-frame">
 
@@ -191,10 +175,37 @@
             </div>
 
 
+            <!-- FEED - STARTS IN FRONT -->
 
-            <!-- RIGHT: GAME -->
+            <div
+              class="phone phone-center"
+              data-phone="feed"
+              role="button"
+              tabindex="0"
+              aria-label="Show RefBox'd activity feed screenshot"
+            >
 
-            <div class="phone phone-right">
+              <div class="phone-frame">
+
+                <img
+                  src="assets/screenshots/feed.png"
+                  alt="RefBox'd activity feed"
+                />
+
+              </div>
+
+            </div>
+
+
+            <!-- GAME -->
+
+            <div
+              class="phone phone-right"
+              data-phone="game"
+              role="button"
+              tabindex="0"
+              aria-label="Show RefBox'd game screenshot"
+            >
 
               <div class="phone-frame">
 
@@ -208,6 +219,27 @@
             </div>
 
 
+            <!-- CAROUSEL CONTROLS -->
+
+            <button
+              class="phone-arrow phone-arrow-left"
+              id="phone-prev"
+              type="button"
+              aria-label="Previous screenshot"
+            >
+              ‹
+            </button>
+
+            <button
+              class="phone-arrow phone-arrow-right"
+              id="phone-next"
+              type="button"
+              aria-label="Next screenshot"
+            >
+              ›
+            </button>
+
+
           </div>
 
         </div>
@@ -216,7 +248,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================
@@ -230,23 +261,16 @@
 
       <div class="container feature-strip-grid">
 
-
         <div class="strip-item">
 
           <span class="strip-number">01</span>
 
           <div>
-
             <strong>LOG EVERY GAME</strong>
-
-            <p>
-              Build your complete officiating history.
-            </p>
-
+            <p>Build your complete officiating history.</p>
           </div>
 
         </div>
-
 
 
         <div class="strip-item">
@@ -254,17 +278,11 @@
           <span class="strip-number">02</span>
 
           <div>
-
             <strong>KNOW YOUR NUMBERS</strong>
-
-            <p>
-              Turn your career into meaningful stats.
-            </p>
-
+            <p>Turn your career into meaningful stats.</p>
           </div>
 
         </div>
-
 
 
         <div class="strip-item">
@@ -272,22 +290,15 @@
           <span class="strip-number">03</span>
 
           <div>
-
             <strong>FIND YOUR CREW</strong>
-
-            <p>
-              Connect with officials you work alongside.
-            </p>
-
+            <p>Connect with officials you work alongside.</p>
           </div>
 
         </div>
 
-
       </div>
 
     </section>
-
 
 
     <!-- =====================================
@@ -301,20 +312,14 @@
 
         <div class="section-copy">
 
-
           <div class="section-kicker">
             YOUR HISTORY
           </div>
 
-
           <h2>
-
             Every game tells<br />
-
             part of the story.
-
           </h2>
-
 
           <p>
 
@@ -324,7 +329,6 @@
 
           </p>
 
-
           <p>
 
             Over time, RefBox'd becomes a record of everywhere you've
@@ -332,31 +336,23 @@
 
           </p>
 
-
         </div>
-
 
 
         <div class="history-visual">
 
-
           <div class="history-line"></div>
 
 
-
           <div class="history-game">
-
 
             <div class="history-year">
               2026
             </div>
 
-
             <div class="history-game-card">
 
-              <span>
-                BASKETBALL · NCAA
-              </span>
+              <span>BASKETBALL · NCAA</span>
 
               <strong>
                 Florida vs. Georgia
@@ -368,24 +364,18 @@
 
             </div>
 
-
           </div>
 
 
-
           <div class="history-game">
-
 
             <div class="history-year">
               2025
             </div>
 
-
             <div class="history-game-card">
 
-              <span>
-                FOOTBALL · HIGH SCHOOL
-              </span>
+              <span>FOOTBALL · HIGH SCHOOL</span>
 
               <strong>
                 Friday Night Football
@@ -397,24 +387,18 @@
 
             </div>
 
-
           </div>
 
 
-
           <div class="history-game">
-
 
             <div class="history-year">
               2024
             </div>
 
-
             <div class="history-game-card faded">
 
-              <span>
-                FLAG FOOTBALL
-              </span>
+              <span>FLAG FOOTBALL</span>
 
               <strong>
                 Another game. Another memory.
@@ -426,9 +410,7 @@
 
             </div>
 
-
           </div>
-
 
         </div>
 
@@ -436,7 +418,6 @@
       </div>
 
     </section>
-
 
 
     <!-- =====================================
@@ -450,19 +431,15 @@
 
       <div class="container">
 
-
         <div class="center-heading">
-
 
           <div class="section-kicker">
             CAREER STATS
           </div>
 
-
           <h2>
             See your career differently.
           </h2>
-
 
           <p>
 
@@ -471,9 +448,7 @@
 
           </p>
 
-
         </div>
-
 
 
         <div class="stats-grid">
@@ -481,100 +456,65 @@
 
           <div class="stat-card stat-card-featured">
 
-            <span>
-              CAREER GAMES
-            </span>
+            <span>CAREER GAMES</span>
 
-            <strong>
-              327
-            </strong>
+            <strong>327</strong>
 
-            <small>
-              and counting
-            </small>
+            <small>and counting</small>
 
           </div>
 
 
-
           <div class="stat-card">
 
-            <span>
-              MOST WORKED TEAM
-            </span>
+            <span>MOST WORKED TEAM</span>
 
-            <strong>
-              24
-            </strong>
+            <strong>24</strong>
 
-            <small>
-              games
-            </small>
+            <small>games</small>
 
           </div>
 
 
-
           <div class="stat-card">
 
-            <span>
-              MOST WORKED PARTNER
-            </span>
+            <span>MOST WORKED PARTNER</span>
 
-            <strong>
-              18
-            </strong>
+            <strong>18</strong>
 
-            <small>
-              games together
-            </small>
+            <small>games together</small>
 
           </div>
 
 
-
           <div class="stat-card">
 
-            <span>
-              VENUES
-            </span>
+            <span>VENUES</span>
 
-            <strong>
-              37
-            </strong>
+            <strong>37</strong>
 
-            <small>
-              different locations
-            </small>
+            <small>different locations</small>
 
           </div>
 
 
         </div>
-
 
 
         <div class="stat-features">
 
           <span>SEASONS</span>
-
           <span>SPORTS</span>
-
           <span>LEVELS</span>
-
           <span>TEAMS</span>
-
           <span>PARTNERS</span>
-
           <span>VENUES</span>
 
         </div>
 
-
       </div>
 
     </section>
-
 
 
     <!-- =====================================
@@ -591,22 +531,16 @@
 
         <div class="community-visual">
 
-
           <div class="crew-card">
 
 
             <div class="crew-header">
 
-              <span>
-                YOUR CREW
-              </span>
+              <span>YOUR CREW</span>
 
-              <small>
-                RefBox'd
-              </small>
+              <small>RefBox'd</small>
 
             </div>
-
 
 
             <div class="official-row">
@@ -615,19 +549,10 @@
                 DK
               </div>
 
-
               <div>
-
-                <strong>
-                  You
-                </strong>
-
-                <span>
-                  327 games
-                </span>
-
+                <strong>You</strong>
+                <span>327 games</span>
               </div>
-
 
               <div class="friend-status">
                 YOU
@@ -636,33 +561,22 @@
             </div>
 
 
-
             <div class="official-row">
 
               <div class="avatar">
                 JM
               </div>
 
-
               <div>
-
-                <strong>
-                  Jordan M.
-                </strong>
-
-                <span>
-                  12 games together
-                </span>
-
+                <strong>Jordan M.</strong>
+                <span>12 games together</span>
               </div>
-
 
               <div class="friend-status active">
                 FRIENDS
               </div>
 
             </div>
-
 
 
             <div class="official-row">
@@ -671,26 +585,16 @@
                 AR
               </div>
 
-
               <div>
-
-                <strong>
-                  Alex R.
-                </strong>
-
-                <span>
-                  8 games together
-                </span>
-
+                <strong>Alex R.</strong>
+                <span>8 games together</span>
               </div>
-
 
               <div class="friend-status active">
                 FRIENDS
               </div>
 
             </div>
-
 
 
             <div class="official-row">
@@ -699,19 +603,10 @@
                 TS
               </div>
 
-
               <div>
-
-                <strong>
-                  Taylor S.
-                </strong>
-
-                <span>
-                  5 games together
-                </span>
-
+                <strong>Taylor S.</strong>
+                <span>5 games together</span>
               </div>
-
 
               <div class="friend-status active">
                 FRIENDS
@@ -722,27 +617,19 @@
 
           </div>
 
-
         </div>
 
 
-
         <div class="section-copy">
-
 
           <div class="section-kicker">
             THE SOCIAL SIDE OF OFFICIATING
           </div>
 
-
           <h2>
-
             Officiating is better<br />
-
             with your crew.
-
           </h2>
-
 
           <p>
 
@@ -752,9 +639,7 @@
           </p>
 
 
-
           <div class="community-features">
-
 
             <div>
 
@@ -767,7 +652,6 @@
               </span>
 
             </div>
-
 
 
             <div>
@@ -783,7 +667,6 @@
             </div>
 
 
-
             <div>
 
               <strong>
@@ -796,9 +679,7 @@
 
             </div>
 
-
           </div>
-
 
         </div>
 
@@ -808,7 +689,6 @@
     </section>
 
 
-
     <!-- =====================================
          BUILT FOR OFFICIALS
          ===================================== -->
@@ -816,7 +696,6 @@
     <section class="section built-section">
 
       <div class="container">
-
 
         <div class="center-heading">
 
@@ -829,7 +708,6 @@
           </h2>
 
         </div>
-
 
 
         <div class="built-grid">
@@ -855,7 +733,6 @@
           </div>
 
 
-
           <div class="built-card">
 
             <div class="built-icon">
@@ -876,7 +753,6 @@
           </div>
 
 
-
           <div class="built-card">
 
             <div class="built-icon">
@@ -895,7 +771,6 @@
             </p>
 
           </div>
-
 
 
           <div class="built-card">
@@ -920,15 +795,13 @@
 
         </div>
 
-
       </div>
 
     </section>
 
 
-
     <!-- =====================================
-         DOWNLOAD CTA
+         DOWNLOAD
          ===================================== -->
 
     <section
@@ -937,7 +810,6 @@
     >
 
       <div class="download-glow"></div>
-
 
       <div class="container download-content">
 
@@ -955,33 +827,34 @@
 
 
         <h2>
-
           Ready to Box<br />
-
           your career?
-
         </h2>
 
 
         <p>
-
           Start building your officiating history with RefBox'd.
-
         </p>
 
 
-
         <a
-          href="#"
+          href="https://apps.apple.com/us/app/refboxd/id6796103132"
           class="app-store-button large"
           id="bottom-app-store-link"
+          target="_blank"
+          rel="noopener noreferrer"
         >
 
-
-          <div class="apple-logo">
-            ●
-          </div>
-
+          <svg
+            class="apple-logo"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              fill="currentColor"
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.31.03-1.73-.78-3.23-.78-1.5 0-1.97.76-3.21.81-1.29.05-2.27-1.32-3.1-2.55C4.42 17 3.12 12.57 4.87 9.53a4.82 4.82 0 0 1 4.09-2.47c1.28-.03 2.48.86 3.23.86.72 0 2.13-1.07 3.59-.91.61.03 2.32.24 3.42 1.86a4.6 4.6 0 0 0-2.03 3.84 4.48 4.48 0 0 0 2.52 4.09c-.29.84-.66 1.66-.98 2.7ZM13.06 4.41A4.41 4.41 0 0 1 15.88 2a4.31 4.31 0 0 1-1 3.13 3.65 3.65 0 0 1-2.86 1.35 4.17 4.17 0 0 1 1.04-3.07Z"
+            />
+          </svg>
 
           <div>
 
@@ -995,7 +868,6 @@
 
           </div>
 
-
         </a>
 
 
@@ -1007,13 +879,11 @@
   </main>
 
 
-
   <!-- =====================================
        FOOTER
        ===================================== -->
 
   <footer>
-
 
     <div class="container footer-inner">
 
@@ -1032,7 +902,6 @@
       </div>
 
 
-
       <div class="footer-links">
 
         <a href="#">
@@ -1046,23 +915,17 @@
       </div>
 
 
-
       <div class="copyright">
-
         © 2026 RefBox'd
-
       </div>
 
 
     </div>
 
-
   </footer>
 
 
-
   <script src="script.js"></script>
-
 
 </body>
 
